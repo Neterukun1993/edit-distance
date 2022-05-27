@@ -1,0 +1,8 @@
+.delete { background-color: lightgray; }
+.insert { background-color: lightgray; }
+.substitute { background-color: lightgray; }
+
+label{
+    display: inline-block;
+    width: 20px;
+}

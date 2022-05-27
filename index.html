@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        MathJax = {
+          chtml: {
+            matchFontHeight: false
+          },
+          tex: {
+            inlineMath: [['$', '$']]
+          }
+        };
+        </script>
+        <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        </script>
+</script>
+    <title>編集距離</title>
+</head>
+<body>
+    <p>文字列 $S$ を $T$ へと変換するときの最小の操作回数（編集距離）を求めます。操作には以下の $3$ つがあります。</p>
+    <ul>
+        <li>変更操作: 文字を $1$ 個選び、変更する。</li>
+        <li>削除操作: 文字を $1$ 個選び、削除する。</li>
+        <li>挿入操作: 文字を好きな箇所に $1$ 個挿入する。</li>
+    </ul>
+    <label>$S$</label><input type="text" id="src" name="src"></input></br>
+    <label>$T$</label><input type="text" id="dst" name="dst"></input>
+    <button type="button" onclick="showResult(document.getElementById('src').value, document.getElementById('dst').value)">求める</button>
+    <hr>
+    <p id="result"></p>
+    <script type="text/javascript" src="js/levenshtein_distance.js"></script>
+</body>
+</html>
